@@ -7,7 +7,7 @@
 ```
 git clone https://github.com/eth3real-code/buspassenger
 ```
-- And add to server.cfg
+- And add to server.cfg:
 ```
 ensure buspassenger
 ```
