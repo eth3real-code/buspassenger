@@ -20,6 +20,6 @@ git clone https://github.com/eth3real-code/buspassenger
 ensure buspassenger
 ```
 
-## 📦 Dependencies
-- None
+## 📦 Zero dependencies
+- 🙌 None
 
