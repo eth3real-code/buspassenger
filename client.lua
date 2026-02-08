@@ -1,6 +1,5 @@
 -- Minimalist client.lua for FiveM - Bus/Airbus player can use as passenger (with player-inside check)
 Citizen.CreateThread(function()
-
     local function warpVehiclePed(ped, veh)
         Citizen.CreateThread(function()
             while true do
@@ -8,11 +7,11 @@ Citizen.CreateThread(function()
 --                TaskEnterVehicle(ped, veh, 10, i, 2.0, 16, 0)
                 TaskWarpPedIntoVehicle(ped, veh, 1)
 --                print("warping vehicle:", veh, "ped:", ped)
-                Citizen.Wait(75)
+                Citizen.Wait(1000)
             end
         end)
     end
-
+        
     while true do
     local waitTime = 1000
 --    local waitTime = 3000
@@ -67,7 +66,9 @@ Citizen.CreateThread(function()
         local veh = GetVehiclePedIsIn(playerPed, false)
         playerisdriver = GetPedInVehicleSeat(vehicle, -1)
         if veh == busveh then
-            warpVehiclePed(playerPed, veh)
+            TaskWarpPedIntoVehicle(ped, veh, 3)
+            TaskWarpPedIntoVehicle(ped, veh, 1)
+--            warpVehiclePed(playerPed, veh)
         end
     end
 
