@@ -5,7 +5,7 @@
 - 💬 https://distopia.qzz.io
 
 ## 📝 Description
-Minimalist and standalone script that allows the player to board as a passenger to the vehicle models "Bus" and "Airbus" created by the native AI NPC traffic.
+Minimalist and standalone FiveM script that allows the player to board as a passenger to the vehicle models "Bus" and "Airbus" created by the native AI NPC traffic.
 ![Screenshot](passenger.png)
 
 
