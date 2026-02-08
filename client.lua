@@ -66,8 +66,8 @@ Citizen.CreateThread(function()
         local veh = GetVehiclePedIsIn(playerPed, false)
         playerisdriver = GetPedInVehicleSeat(vehicle, -1)
         if veh == busveh then
-            TaskWarpPedIntoVehicle(ped, veh, 3)
-            TaskWarpPedIntoVehicle(ped, veh, 1)
+            TaskWarpPedIntoVehicle(playerPed, veh, 3)
+            TaskWarpPedIntoVehicle(playerPed, veh, 1)
 --            warpVehiclePed(playerPed, veh)
         end
     end
