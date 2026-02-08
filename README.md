@@ -6,6 +6,8 @@
 
 ## 📝 Description
 Minimalist standalone client script for FiveM to enable the 'bus' and 'airbus' models that are created by the native NPC traffic are available to be used as passenger vehicles (with a player-inside check)
+![Screenshot](passenger.png)
+
 
 ## ✨ Features
 - **Inmersive environment**: Players can travel free as passenger in buses.
