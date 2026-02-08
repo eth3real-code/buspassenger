@@ -5,7 +5,7 @@
 - 💬 https://distopia.qzz.io
 
 ## 📝 Description
-Minimalist standalone client script for FiveM to enable the 'bus' and 'airbus' models that are created by the native NPC traffic are available to be used as passenger vehicles (with a player-inside check)
+Minimalist and standalone script that allows the player to board as a passenger to the vehicle models "Bus" and "Airbus" created by the native AI NPC traffic.
 ![Screenshot](passenger.png)
 
 
