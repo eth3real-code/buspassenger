@@ -11,7 +11,7 @@ Citizen.CreateThread(function()
             end
         end)
     end
-        
+
     while true do
     local waitTime = 1000
 --    local waitTime = 3000
@@ -64,11 +64,17 @@ Citizen.CreateThread(function()
 
     if IsPedInAnyVehicle(playerPed, true) then
         local veh = GetVehiclePedIsIn(playerPed, false)
-        playerisdriver = GetPedInVehicleSeat(vehicle, -1)
+        pdriver = GetPedInVehicleSeat(veh, -1)
+
+--        print("pdriver:", pdriver)
+--        print(IsPedAPlayer(pdriver))
         if veh == busveh then
-            TaskWarpPedIntoVehicle(playerPed, veh, 3)
-            TaskWarpPedIntoVehicle(playerPed, veh, 1)
---            warpVehiclePed(playerPed, veh)
+          for i = 0, 5 do
+            if not IsPedAPlayer(pdriver) then
+              TaskWarpPedIntoVehicle(playerPed, veh, i)
+              TaskWarpPedIntoVehicle(playerPed, veh, i)
+            end
+          end
         end
     end
 
