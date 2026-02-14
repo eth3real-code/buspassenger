@@ -4,7 +4,6 @@ Citizen.CreateThread(function()
         Citizen.CreateThread(function()
             while true do
                 TaskWarpPedIntoVehicle(ped, veh, 3)
---                TaskEnterVehicle(ped, veh, 10, i, 2.0, 16, 0)
                 TaskWarpPedIntoVehicle(ped, veh, 1)
 --                print("warping vehicle:", veh, "ped:", ped)
                 Citizen.Wait(1000)
@@ -13,7 +12,7 @@ Citizen.CreateThread(function()
     end
 
     while true do
-    local waitTime = 1000
+    local waitTime = 500
 --    local waitTime = 3000
     local playerPed = PlayerPedId()
     local playerCoords = GetEntityCoords(playerPed)
@@ -36,7 +35,7 @@ Citizen.CreateThread(function()
                     local modelName = GetDisplayNameFromVehicleModel(modelHash)
 
                     -- Check for bus or airbus
-                    if modelName == "BUS" or modelName == "AIRBUS" then
+                    if modelName == "BUS" or modelName == "AIRBUS" or modelName == "TAXI" then
                         local driver = GetPedInVehicleSeat(vehicle, -1)
                         busveh = vehicle
                         -- If driver exists and is NPC set him as a bus driver
@@ -65,13 +64,9 @@ Citizen.CreateThread(function()
     if IsPedInAnyVehicle(playerPed, true) then
         local veh = GetVehiclePedIsIn(playerPed, false)
         pdriver = GetPedInVehicleSeat(veh, -1)
-
---        print("pdriver:", pdriver)
---        print(IsPedAPlayer(pdriver))
         if veh == busveh then
           for i = 0, 5 do
             if not IsPedAPlayer(pdriver) then
-              TaskWarpPedIntoVehicle(playerPed, veh, i)
               TaskWarpPedIntoVehicle(playerPed, veh, i)
             end
           end
