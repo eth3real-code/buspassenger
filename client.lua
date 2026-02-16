@@ -12,8 +12,7 @@ Citizen.CreateThread(function()
     end
 
     while true do
-    local waitTime = 500
---    local waitTime = 3000
+    local waitTime = 3000
     local playerPed = PlayerPedId()
     local playerCoords = GetEntityCoords(playerPed)
     local playerVehicle = GetVehiclePedIsIn(playerPed, false)
