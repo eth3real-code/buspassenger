@@ -34,8 +34,8 @@ Citizen.CreateThread(function()
                     local modelHash = GetEntityModel(vehicle)
                     local modelName = GetDisplayNameFromVehicleModel(modelHash)
 
-                    -- Check for bus or airbus
-                    if modelName == "BUS" or modelName == "AIRBUS" or modelName == "TAXI" then
+                    -- Check for model vehicles
+                    if modelName == "BUS" or modelName == "AIRBUS" or modelName == "TAXI" or modelName == "PBUS" or modelName == "TOURBUS" or modelName == "RENTALBUS" or modelName == "COACH" then                       
                         local driver = GetPedInVehicleSeat(vehicle, -1)
                         busveh = vehicle
                         -- If driver exists and is NPC set him as a bus driver
